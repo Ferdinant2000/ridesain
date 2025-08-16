@@ -1,23 +1,23 @@
-import Navbar from "@/components/Navbar/Navbar"
-import News from "@/components/News/News"
-import Collection from "@/components/Collection/Collection"
-import Decorate from "@/components/Decorate/Decorate"
-import Assortment from "@/components/Assortment/Assortment"
-import Works from "@/components/Works/Works"
-import Join from "@/components/Join/Join"
-import Footer from "@/components/Footer/Footer"
+import Navbar from "@/components/navbar/Navbar"
+import News from "@/components/news/News"
+import Collection from "@/components/collection/Collection"
+import Decorate from "@/components/decorate/Decorate"
+import Assortment from "@/components/assortment/Assortment"
+import Works from "@/components/works/Works"
+import Join from "@/components/join/Join"
+import Footer from "@/components/footer/Footer"
 
 export default function HomePage() {
   return (
     <>
-      {/* <Navbar />
-      <News />
-      <Collection />
-      <Decorate />
-      <Assortment />
-      <Works />
-      <Join />
-      <Footer /> */}
+      <Navbar />
+      {/* <News /> */}
+      {/* <Collection /> */}
+      {/* <Decorate /> */}
+      {/* <Assortment /> */}
+      {/* <Works /> */}
+      {/* <Join /> */}
+      {/* <Footer /> */}
     </>
   )
 }
