@@ -15,3 +15,8 @@ html, body {
   background-color: #f5f5f5;
   color: #222;
 }
+
+section{
+  width: 100%;
+  padding: 20px 75px;
+}
