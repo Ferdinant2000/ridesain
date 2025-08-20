@@ -1,0 +1,49 @@
+.collection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.collectionTitle {
+    font-size: 32px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.collectionDescription {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #666;
+}
+
+.collectionImages {
+    display: flex;
+    gap: 40px;
+    align-items: end;
+    justify-content: center;
+}
+
+.collectionImages > img:first-child {
+    border-top-left-radius: 100px;
+}
+
+.collectionImages img:nth-child(2) {
+    margin-bottom: 40px;
+}
+
+.imageWithOverlay {
+    position: relative;
+    display: inline-block;
+}
+
+.imageWithOverlay img:first-child {
+    display: block;
+    border-bottom-right-radius: 100px;
+}
+
+.overlay {
+    position: absolute;
+    right: 35%;
+    top: 0;
+}

@@ -12,8 +12,9 @@ export default function HomePage() {
   return (
     <>
       <Navbar />
-      {/* <News /> */}
-      {/* <Collection /> */}
+      <News />
+      <Info />
+      <Collection />
       {/* <Decorate /> */}
       {/* <Assortment /> */}
       {/* <Works /> */}
