@@ -1,0 +1,55 @@
+.decorate {
+    background: #F2F5FF;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 150px;
+}
+
+.decorateLeft {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.decorateDescription {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 39px;
+    color: #666;
+}
+
+.decorateTitle {
+    font-weight: 700;
+    font-size: 32px;
+    color: #333;
+}
+
+.decorateRight {
+    width: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decorateImage {
+    height: 650px;
+    border-radius: 50px 10px 50px 10px;
+    position: relative;
+    z-index: 2;
+    display: block;
+}
+
+.decorateCircle {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 372px;
+    height: 372.71px;
+    background: #09513B;
+    border-radius: 50%;
+    z-index: 1;
+}

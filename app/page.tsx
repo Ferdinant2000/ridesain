@@ -15,7 +15,7 @@ export default function HomePage() {
       <News />
       <Info />
       <Collection />
-      {/* <Decorate /> */}
+      <Decorate />
       {/* <Assortment /> */}
       {/* <Works /> */}
       {/* <Join /> */}
