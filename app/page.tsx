@@ -19,7 +19,7 @@ export default function HomePage() {
       <Assortment />
       <hr />
       <Works />
-      {/* <Join /> */}
+      <Join />
       {/* <Footer /> */}
     </>
   )

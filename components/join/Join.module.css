@@ -1,0 +1,63 @@
+.join {
+    background: #F2F5FF;
+    padding: 64px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.joinTitle {
+    font-size: 32px;
+    font-weight: 700;
+    color: #222;
+}
+
+.joinDescription {
+    color: #666;
+    font-size: 20px;
+    margin-bottom: 40px;
+    line-height: 39px;
+}
+
+.joinForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 486px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+.joinInput {
+    flex: 1;
+    padding: 20px 24px;
+    font-size: 1.1rem;
+    border: 2px solid #15516a;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    outline: none;
+    background: #fff;
+    color: #222;
+}
+
+.joinInput::placeholder {
+    color: #b0b8c1;
+}
+
+.joinButton {
+    padding: 0 48px;
+    background: #054C73;
+    text-transform: capitalize;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    border: 1px solid #011C42;
+    border-radius: 0 6px 6px 0;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.joinButton:hover {
+    background: #054C73;
+}
