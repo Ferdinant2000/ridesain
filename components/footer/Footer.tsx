@@ -8,7 +8,7 @@ export default function Footer() {
         <p className={styles.footerText}>
           Do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
         </p>
-        <h3 className={styles.footerSubtitle}>Follow Us</h3>
+        <h2 className={styles.footerSubtitle}>Follow Us</h2>
       </div>
       <div className={styles.footerRight}>
         <h2 className={styles.footerTitle}>Instagram Shop</h2>
