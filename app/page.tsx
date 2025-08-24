@@ -17,7 +17,8 @@ export default function HomePage() {
       <Collection />
       <Decorate />
       <Assortment />
-      {/* <Works /> */}
+      <hr />
+      <Works />
       {/* <Join /> */}
       {/* <Footer /> */}
     </>
