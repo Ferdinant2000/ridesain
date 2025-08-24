@@ -20,7 +20,7 @@ export default function HomePage() {
       <hr />
       <Works />
       <Join />
-      {/* <Footer /> */}
+      <Footer />
     </>
   )
 }
