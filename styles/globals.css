@@ -3,7 +3,6 @@
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
-/* Сброс и базовые стили */
 * {
   margin: 0;
   padding: 0;
@@ -41,4 +40,8 @@ button {
 button:hover {
   background: #043A5C;
   cursor: pointer;
+}
+
+hr {
+  border: 1px solid #D7D6D6;
 }
