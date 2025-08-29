@@ -9,7 +9,6 @@
 .worksTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  /* margin-bottom: 12px; */
 }
 
 .worksSubtitle {
@@ -23,6 +22,7 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .worksStep {
@@ -31,6 +31,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .worksImageWrapper {
