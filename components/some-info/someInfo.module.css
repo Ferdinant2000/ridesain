@@ -1,8 +1,11 @@
-.info {
-    background: #F2F5FF;
+.container{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.info {
+    background: #F2F5FF;
     height: 150px;
 }
 

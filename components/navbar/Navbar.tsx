@@ -2,9 +2,8 @@ import styles from "./Navbar.module.css";
 
 export default function Navbar() {
   return (
-    <>
-    <nav>
-      <div className={styles.navbar}>
+    <nav className={styles.navbar}>
+      <div className={`global_container ${styles.container}`}>
         <div className={styles.logo}>
           <a href="/">Furniture</a>
         </div>
@@ -17,6 +16,5 @@ export default function Navbar() {
         </ul>
       </div>
     </nav>
-    </>
-  )
+  );
 }

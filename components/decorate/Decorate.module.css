@@ -1,9 +1,13 @@
+.container{
+    display: flex;
+    align-items: center;
+}
+
 .decorate {
     background: #F2F5FF;
     display: flex;
     align-items: center;
     gap: 40px;
-    padding: 40px 150px;
 }
 
 .decorateLeft {

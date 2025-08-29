@@ -1,10 +1,12 @@
-.join {
-    background: #F2F5FF;
-    padding: 64px 0;
+.container {
     text-align: center;
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.join {
+    background: #F2F5FF;
 }
 
 .joinTitle {

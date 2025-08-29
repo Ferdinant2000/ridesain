@@ -16,10 +16,18 @@ body {
   color: #222;
 }
 
+.global_container {
+  width: 90rem;
+}
+
+nav,
 section,
 footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  padding: 50px 75px;
+  padding: 50px 150px;
   background: #fcfcfc;
 }
 

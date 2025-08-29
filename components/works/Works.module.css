@@ -1,40 +1,42 @@
-.worksSection {
-  padding: 64px 0;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
 .worksTitle {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 12px;
+  /* margin-bottom: 12px; */
 }
 
 .worksSubtitle {
   color: #888;
   font-size: 1.2rem;
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 .worksSteps {
   display: flex;
-  gap: 10px;
-  justify-content: center;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
 }
 
 .worksStep {
   flex: 1 1 300px;
-  max-width: 350px;
+  max-width: 32%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .worksImageWrapper {
+  width: 100%;
   position: relative;
-  width: 337px;
-  margin-bottom: 32px;
+  margin-bottom: 25px;
 }
 
 .worksImage {

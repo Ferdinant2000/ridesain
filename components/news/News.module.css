@@ -1,9 +1,12 @@
-.news {
-    width: 100%;
-    height: 749px;
+.container {
     display: flex;
     align-items: center;
     justify-content: right;
+}
+
+.news {
+    height: 749px;
+    display: flex;
     background-image: url('/images/MaskGroup.png');
     background-size: cover;
     background-position: center;
