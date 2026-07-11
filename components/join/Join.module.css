@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    align-items: center;
+    padding: 0 80px;
 }
 
 .join {
@@ -17,30 +19,32 @@
 
 .joinDescription {
     color: #666;
-    font-size: 20px;
-    margin-bottom: 40px;
-    line-height: 39px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    max-width: 500px;
 }
 
 .joinForm {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 486px;
-    height: 70px;
-    margin: 0 auto;
+    align-items: stretch;
+    width: 100%;
+    max-width: 486px;
+    height: 60px;
 }
 
 .joinInput {
     flex: 1;
-    padding: 20px 24px;
-    font-size: 1.1rem;
+    padding: 0 20px;
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
     border: 2px solid #15516a;
     border-right: none;
     border-radius: 6px 0 0 6px;
     outline: none;
     background: #fff;
     color: #222;
+    min-width: 0;
 }
 
 .joinInput::placeholder {
@@ -48,18 +52,79 @@
 }
 
 .joinButton {
-    padding: 0 48px;
+    width: 120px;
+    height: 100%;
+    padding: 0 24px;
     background: #054C73;
-    text-transform: capitalize;
     color: #fff;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
+    text-transform: capitalize;
     border: 1px solid #011C42;
     border-radius: 0 6px 6px 0;
     cursor: pointer;
     transition: background 0.2s;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .joinButton:hover {
-    background: #054C73;
+    background: #043A5C;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+    }
+
+    .joinTitle {
+        font-size: 26px;
+    }
+
+    .joinDescription {
+        font-size: 15px;
+    }
+
+    .joinForm {
+        flex-direction: column;
+        height: auto;
+        gap: 12px;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .joinInput {
+        width: 100%;
+        height: 48px;
+        border: 2px solid #15516a;
+        border-right: 2px solid #15516a;
+        border-radius: 6px;
+        padding: 0 16px;
+    }
+
+    .joinButton {
+        width: 100%;
+        height: 48px;
+        min-height: 48px;
+        padding: 0;
+        border-radius: 6px;
+        border: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .joinTitle {
+        font-size: 22px;
+    }
 }

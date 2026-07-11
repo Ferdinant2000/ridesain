@@ -1,19 +1,44 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import styles from "./Decorate.module.css";
+import Image from 'next/image';
 
 export default function Decorate() {
   return (
     <section className={styles.decorate}>
       <div className={`global_container ${styles.container}`}>
-        <div className={styles.decorateLeft}>
+        <motion.div
+          className={styles.decorateLeft}
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <h1 className={styles.decorateTitle}>Beautify Your Space</h1>
-          <p className={styles.decorateDescription}>Do eiusmod tempor incididunt ut labore et <br />dolore magna aliqua. Ut enim ad minim veniam, <br />quis nostrud exercitation ullamco laboris.</p>
+          <p className={styles.decorateDescription}>
+            Transform any room with elegant pieces and refined details that reflect your personal style.
+          </p>
           <button className={styles.decorateButton}>Learn More</button>
-        </div>
-        <div className={styles.decorateRight}>
-          <div className={styles.decorateCircle}></div>
-          <img className={styles.decorateImage} src="/images/image97.png" alt="" />
-        </div>
+        </motion.div>
+        <motion.div
+          className={styles.decorateRight}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          <div className={styles.decorateCircle} />
+          <div className={styles.decorateImageWrapper}>
+            <Image
+              src="/images/image97.png"
+              alt="Beautify Your Space"
+              fill
+              className={styles.decorateImage}
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
-  )
+  );
 }

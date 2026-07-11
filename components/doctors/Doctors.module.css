@@ -1,0 +1,115 @@
+.doctorsSection {
+  padding: 60px 0;
+  background-color: #fcfcfc;
+  min-height: calc(100vh - 122px);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 65px;
+  width: 100%;
+}
+
+.pageTitle {
+  font-weight: 700;
+  font-size: 42px;
+  color: #054C73;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.pageDescription {
+  font-weight: 500;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 50px;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  width: 100%;
+}
+
+.card {
+  background: #DFE9F4;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  align-items: center;
+  padding: 30px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.imgWrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 4px solid #fff;
+}
+
+.img {
+  object-fit: cover;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.cardTitle {
+  font-weight: 700;
+  font-size: 22px;
+  color: #054C73;
+  margin-bottom: 5px;
+}
+
+.cardRole {
+  font-weight: 600;
+  font-size: 14px;
+  color: #054C73;
+  opacity: 0.7;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cardDescription {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+  
+  .pageTitle {
+    font-size: 32px;
+  }
+}

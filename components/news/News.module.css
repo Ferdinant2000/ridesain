@@ -1,12 +1,12 @@
 .container {
     display: flex;
     align-items: center;
-    justify-content: right;
+    justify-content: flex-end;
+    padding: 0 80px;
 }
 
 .news {
-    height: 749px;
-    display: flex;
+    min-height: 600px;
     background-image: url('/images/MaskGroup.png');
     background-size: cover;
     background-position: center;
@@ -14,8 +14,8 @@
 }
 
 .card {
-    width: 643px;
-    height: 443px;
+    width: 100%;
+    max-width: 580px;
     border-radius: 10px;
     background: #DFE9F4;
     padding: 40px;
@@ -29,20 +29,98 @@
     font-size: 16px;
     line-height: 100%;
     letter-spacing: 3px;
-
 }
 
 .title {
     font-weight: 700;
     font-size: 52px;
-    line-height: 65px;
+    line-height: 1.25;
     color: #054C73;
 }
 
 .description {
     font-weight: 500;
     font-size: 18px;
-    line-height: 39px;
+    line-height: 1.8;
     color: #333;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.button {
+    margin-top: 10px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+        justify-content: center;
+    }
+
+    .news {
+        min-height: 500px;
+        background-position: left center;
+    }
+
+    .card {
+        max-width: 100%;
+        background: rgba(223, 233, 244, 0.95);
+    }
+
+    .title {
+        font-size: 42px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 24px;
+        justify-content: center;
+    }
+
+    .news {
+        min-height: 420px;
+        align-items: center;
+    }
+
+    .card {
+        padding: 28px 24px;
+        gap: 12px;
+    }
+
+    .title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .news {
+        min-height: 380px;
+    }
+
+    .card {
+        padding: 24px 16px;
+    }
+
+    .headTitle {
+        font-size: 13px;
+    }
+
+    .title {
+        font-size: 26px;
+    }
+
+    .description {
+        font-size: 13px;
+        line-height: 1.6;
+    }
 }

@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    padding: 0 80px;
 }
 
 .collectionTitle {
@@ -18,38 +19,106 @@
 }
 
 .collectionImages {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
     margin-top: 50px;
     align-items: end;
-    justify-content: space-between;
-}
-
-.collectionImages img {
-    width: 30%;
-}
-
-.collectionImages>img:first-child {
-    border-top-left-radius: 120px;
-}
-
-.collectionImages img:nth-child(2) {
-    margin-bottom: 5%;
-}
-
-.imageWithOverlay {
-    width: 30%;
-    position: relative;
-    display: inline-block;
-}
-
-.imageWithOverlay img:first-child {
-    display: block;
-    border-bottom-right-radius: 120px;
     width: 100%;
 }
 
+.imgWrapper {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    /* border-radius lives here, not on the <img> */
+    border-radius: 8px;
+}
+
+/* Card 1 — top-left scallop */
+.imgWrapper:first-child {
+    border-top-left-radius: 120px;
+}
+
+/* Card 3 (imageWithOverlay) — bottom-right scallop */
+.imageWithOverlay {
+    border-bottom-right-radius: 120px;
+}
+
+.imgMiddle {
+    margin-bottom: 8%;
+}
+
+.img {
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    /* NO border-radius here — parent handles clipping */
+    border-radius: 0 !important;
+}
+
+.imgWrapper:hover .img {
+    transform: scale(1.05);
+}
+
+/* Lamp overlay — centred horizontally at the top */
 .overlay {
     position: absolute;
-    right: 35%;
-    top: 0;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.overlayImg {
+    object-fit: contain;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+    transform-origin: top center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .collection {
+        padding: 0 40px;
+    }
+
+    .imgWrapper {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .collection {
+        padding: 0 24px;
+    }
+
+    .collectionImages {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        margin-top: 30px;
+    }
+
+    .imgWrapper {
+        height: 260px;
+        margin-bottom: 0 !important;
+    }
+
+    .collectionTitle {
+        font-size: 26px;
+    }
+
+    .collectionDescription {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .collection {
+        padding: 0 16px;
+    }
+
+    .imgWrapper {
+        height: 220px;
+    }
 }

@@ -1,15 +1,37 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import styles from "./Join.module.css";
 
 export default function Join() {
   return (
     <section className={styles.join}>
       <div className={`global_container ${styles.container}`}>
-        <h1 className={styles.joinTitle}>Join Our Mailing List</h1>
-        <p className={styles.joinDescription}>
-          Sign up to receive inspiration, product updates,<br />
-          and special offers from our team.
-        </p>
-        <form className={styles.joinForm}>
+        <motion.h1
+          className={styles.joinTitle}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+        >
+          Join Our Mailing List
+        </motion.h1>
+        <motion.p
+          className={styles.joinDescription}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+        >
+          Sign up to receive inspiration, product updates, and special offers from our team.
+        </motion.p>
+        <motion.form
+          className={styles.joinForm}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <input
             type="email"
             className={styles.joinInput}
@@ -18,7 +40,7 @@ export default function Join() {
           <button type="submit" className={styles.joinButton}>
             Submit
           </button>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

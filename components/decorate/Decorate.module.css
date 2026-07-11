@@ -1,59 +1,158 @@
-.container{
+.container {
     display: flex;
     align-items: center;
+    gap: 60px;
+    padding: 0 80px;
 }
 
 .decorate {
     background: #F2F5FF;
-    display: flex;
-    align-items: center;
-    gap: 40px;
 }
 
 .decorateLeft {
-    width: 50%;
+    flex: 1 1 45%;
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 24px;
 }
 
 .decorateDescription {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 39px;
+    font-size: 18px;
+    line-height: 1.8;
     color: #666;
 }
 
 .decorateTitle {
     font-weight: 700;
-    font-size: 32px;
+    font-size: 36px;
     color: #333;
+    line-height: 1.2;
+}
+
+.decorateButton {
+    width: 180px;
+    height: 56px;
+    font-size: 14px;
 }
 
 .decorateRight {
-    width: 50%;
+    flex: 1 1 45%;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 500px;
+}
+
+.decorateImageWrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 500px;
+    border-radius: 50px 10px 50px 10px;
+    overflow: hidden;
 }
 
 .decorateImage {
-    height: 650px;
-    border-radius: 50px 10px 50px 10px;
-    position: relative;
-    z-index: 2;
-    display: block;
+    object-fit: cover;
 }
 
 .decorateCircle {
     position: absolute;
-    right: 15px;
+    right: -30px;
     top: 50%;
     transform: translateY(-50%);
-    width: 372px;
-    height: 372.71px;
+    width: 320px;
+    height: 320px;
     background: #09513B;
     border-radius: 50%;
     z-index: 1;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+        gap: 40px;
+    }
+
+    .decorateTitle {
+        font-size: 28px;
+    }
+
+    .decorateRight {
+        min-height: 400px;
+    }
+
+    .decorateImageWrapper {
+        height: 400px;
+    }
+
+    .decorateCircle {
+        width: 250px;
+        height: 250px;
+        right: -20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 0 24px;
+        gap: 32px;
+    }
+
+    .decorateLeft,
+    .decorateRight {
+        width: 100%;
+        flex: none;
+    }
+
+    .decorateTitle {
+        font-size: 26px;
+    }
+
+    .decorateDescription {
+        font-size: 15px;
+    }
+
+    .decorateButton {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .decorateRight {
+        min-height: 340px;
+    }
+
+    .decorateImageWrapper {
+        height: 340px;
+        border-radius: 30px 10px 30px 10px;
+    }
+
+    .decorateCircle {
+        width: 200px;
+        height: 200px;
+        right: -15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .decorateTitle {
+        font-size: 22px;
+    }
+
+    .decorateImageWrapper {
+        height: 280px;
+    }
+
+    .decorateCircle {
+        width: 150px;
+        height: 150px;
+    }
 }
